@@ -4,4 +4,20 @@
 
 ### What is a module ?
 
-A module in batr is the program name. 
+A module in batr is the program name. You can simply create a file such as `start.batr`
+
+`start.batr`
+
+    module Start
+
+    main <
+        s:text = "Hello World!"
+        print(text)
+    >
+
+In the given code you can see two things: 
+
+* the first step is to give a name to your program by writing `module Start`. This will
+name your program window `Start`
+
+TIP: There can only be one `module` defined per file!
