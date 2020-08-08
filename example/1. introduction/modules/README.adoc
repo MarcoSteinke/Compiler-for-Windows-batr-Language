@@ -1,13 +1,7 @@
 # 1.1 Modules
 
-Welcome to the modules tab!
+`Welcome to the modules tab!`
 
 ### What is a module ?
 
-A module in batr is the program name. I want batr to be a better version of the windows batch scripting. I have written a lot
-of automizations and small programs for 8 years now. Windows batch scripting brought me into programming and always followed me.
-
-
-I have written code for personal use and also created things with batch which were used in a business with around 550 employees
-and guaranteed to backup their documents and make flexible work possible due to de-coupling of a employer from a certain device
-and make them able to continue their work on any other device.
+A module in batr is the program name. 
