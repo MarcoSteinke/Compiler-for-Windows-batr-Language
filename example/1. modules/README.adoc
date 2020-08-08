@@ -1,4 +1,4 @@
-# 1.1 Modules
+# 1. Modules
 
 `Welcome to the modules tab!`
 
