@@ -27,7 +27,7 @@ Now you will learn how to write your first program.
 `(taken from start.batr)`
 
     module Start
-    &nbsp;
+     
     main <
         s:text = "Hello World!"
         print(text)
