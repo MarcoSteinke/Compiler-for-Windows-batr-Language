@@ -1,0 +1,39 @@
+# 2. Data Types
+
+In this document you will learn the most important things about `data types` in batter
+
+## Why do we need Data Types?
+
+Since `batter` will be interpreted and translated to `windows batch` code, it is not neccessary to implement
+data types, but on the other side this makes the implementation of data types very easy, since we can reduce
+them to windows batch variables.
+
+With this, we can now introduce some data Types, which will guarantee type-safe programming and reduce the
+amount of mysterious bugs such as in Python or Javascript.
+
+.Data Types
+|===
+|Type |Definition |Explanation
+
+|Integer
+|i:number = 4
+|All positive and negative whole numbers
+
+|Double
+|d:number = 7.2
+|All real numbers
+
+
+|char
+|c:symbol = 'X'
+|All unicode-characters
+
+|String
+|s:name = "Linus"
+|A series of characters
+
+|Boolean
+|b:is_valid = true
+|Logical true of false
+|===
+
