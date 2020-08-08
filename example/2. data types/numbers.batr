@@ -1,6 +1,6 @@
 module Numbers
 
-main<
+main <
     i:first_number = 5
     i:second_number = 8
 
