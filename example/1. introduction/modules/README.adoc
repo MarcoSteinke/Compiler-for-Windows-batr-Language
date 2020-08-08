@@ -32,3 +32,7 @@ Now you will learn how to write your first program.
         s:text = "Hello World!"
         print(text)
     >
+
+As you can see, to define the main method you will only have to write `main`, but additionally you will have
+to give your main method a scope. This scope will be defined by `< >`. Those symbols will also be used for all
+other scopes in this language.
