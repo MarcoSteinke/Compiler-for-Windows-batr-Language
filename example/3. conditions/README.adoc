@@ -1,0 +1,14 @@
+# 3. Conditional programming (conditions)
+
+I want to proudly present you my currently favorite part of this documentation.
+
+You will now learn how to control the flow of your program by using conditions.
+
+TIP: You will need to know about the boolean data type now
+
+## What are conditions?
+
+In programming, you want your program to do certain steps in condition to 
+certain behaviour or states. Thatswhy you will end up using conditions to
+control your program.
+
