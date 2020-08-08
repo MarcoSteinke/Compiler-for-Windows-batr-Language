@@ -1,6 +1,6 @@
 module Method
 
-int:square(i:number) <
+i:square(i:number) <
     i:result = number ** 2
     return result
 >
