@@ -1,0 +1,12 @@
+module Method
+
+int:square(i:number) <
+    i:result = number ** 2
+    return result
+>
+
+main <
+    i:number = 4
+    number = square(number)
+    printf(number)
+>
