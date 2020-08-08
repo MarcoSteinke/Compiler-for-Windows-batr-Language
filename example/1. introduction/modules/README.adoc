@@ -29,6 +29,6 @@ Now you will learn how to write your first program.
     module Start
 
     main <
-            s:text = "Hello World!"
-            print(text)
+        s:text = "Hello World!"
+        print(text)
     >
