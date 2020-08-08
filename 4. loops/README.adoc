@@ -1,0 +1,4 @@
+# 4. Loops
+
+After you have learned about `data types` and `conditional programming` you will now be able to `make decisions`, or let
+your code do so. Therefore I will now introduce loops
