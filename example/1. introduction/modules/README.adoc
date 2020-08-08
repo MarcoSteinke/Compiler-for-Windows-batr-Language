@@ -36,3 +36,8 @@ Now you will learn how to write your first program.
 As you can see, to define the main method you will only have to write `main`, but additionally you will have
 to give your main method a scope. This scope will be defined by `< >`. Those symbols will also be used for all
 other scopes in this language.
+
+The next thing you can see inside is the implementation of a simple Hello-World-program. If you know this, you can now
+click https://github.com/maste150hhu/Windows-batr-Language/tree/master/example/2.%20data%20types[ℹ️ here]. 
+
+`Otherwise you can continue reading this document!`
