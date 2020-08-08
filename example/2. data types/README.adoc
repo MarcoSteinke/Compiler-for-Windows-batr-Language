@@ -5,10 +5,10 @@ In this document you will learn the most important things about `data types` in 
 ## Why do we need Data Types?
 
 Since `batter` will be interpreted and translated to `windows batch` code, it is not neccessary to implement
-data types, but on the other side this makes the implementation of data types very easy, since we can reduce
+`data types`, but on the other side this makes the `implementation of data types` very easy, since we can reduce
 them to windows batch variables.
 
-With this, we can now introduce some data Types, which will guarantee type-safe programming and reduce the
+With this, we can now introduce some `data Types`, which will guarantee `type-safe programming` and reduce the
 amount of mysterious bugs such as in Python or Javascript.
 
 .Data Types
@@ -37,3 +37,6 @@ amount of mysterious bugs such as in Python or Javascript.
 |Logical true of false
 |===
 
+## How to use them?
+In this subdirectory are some `example`s which show `standard implementations` to demonstrate
+the use of `Data Types` in `batter`
