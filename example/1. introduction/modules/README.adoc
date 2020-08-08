@@ -4,7 +4,7 @@
 
 ### 1. What is a module ?
 
-A module in batr is the program name. You can simply create a file such as `start.batr`
+A `module` in batr is the `program name`. You can simply create a file such as `start.batr`
 
 `start.batr`
 
@@ -12,7 +12,7 @@ A module in batr is the program name. You can simply create a file such as `star
 
 In the given code you can see two things: 
 
-* the first step is to give a name to your program by writing `module Start`. This will
+* the `first step` is to give a name to your program by writing `module Start`. This will
 name your program window `Start`
 
 TIP: There can only be one `module` defined per file!
@@ -33,11 +33,11 @@ Now you will learn how to write your first program.
         print(text)
     >
 
-As you can see, to define the main method you will only have to write `main`, but additionally you will have
+As you can see, to define the `main method` you will only have to write `main`, but additionally you will have
 to give your main method a scope. This scope will be defined by `< >`. Those symbols will also be used for all
-other scopes in this language.
+`other scopes` in this language.
 
-The next thing you can see inside is the implementation of a simple Hello-World-program. If you know this, you can now
+The next thing you can see inside is the implementation of a `simple Hello-World-program`. If you know this, you can now
 click https://github.com/maste150hhu/Windows-batr-Language/tree/master/example/2.%20data%20types[ℹ️ here]. 
 
 `Otherwise you can continue reading this document!`
