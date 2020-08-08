@@ -1,6 +1,6 @@
 module Start
 
-    main<
-        s:text = "Hello World!"
-        print(text)
-    >
+main<
+    s:text = "Hello World!"
+    print(text)
+>

@@ -1,2 +1,7 @@
 @echo off
-title App
+title Start
+
+:main
+set text="Hello World!"
+echo %text%
+:main_end
