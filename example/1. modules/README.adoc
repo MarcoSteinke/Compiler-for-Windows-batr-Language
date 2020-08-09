@@ -62,4 +62,16 @@ Instead of `classes`, I want to use `modules` in `batter`. In general, they shal
 
 `At this point I am not sure if there will be fully working objects in batter.`
 
+In addition to the previous example of HelloWorld in batter, you could also do the following:
+
+`(taken from start.batr)`
+
+    module Start
+     
+    main <
+        print("Hello World!")
+    >
+
+As you can see, you can also directly call `print` with a string inside, you do not have to set a variable before.
+
 The next step is to learn about data types, click https://github.com/maste150hhu/Windows-batr-Language/tree/master/example/2.%20data%20types[ℹ️ here]. 
