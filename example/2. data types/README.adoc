@@ -39,4 +39,5 @@ amount of mysterious bugs such as in Python or Javascript.
 
 ## How to use them?
 In this subdirectory are some `example`s which show `standard implementations` to demonstrate
-the use of `Data Types` in `batter`
+the use of `Data Types` in `batter`. The HelloWorld-example in chapter 1 `modules` also was such
+an example for strings.
