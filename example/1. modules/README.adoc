@@ -41,3 +41,17 @@ The next thing you can see inside is the implementation of a `simple Hello-World
 click https://github.com/maste150hhu/Windows-batr-Language/tree/master/example/2.%20data%20types[ℹ️ here]. 
 
 `Otherwise you can continue reading this document!`
+
+In most programming languages, the first example you will face is `Hello World`. It is a simple task to create a program
+which is able to print "Hello World!" to your Terminal, because it requires you to be able to compile code and to understand
+the entry point of a program.
+
+#### Example of Hello World in Java:
+
+```java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
+}
+```
