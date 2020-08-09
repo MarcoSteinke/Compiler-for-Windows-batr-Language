@@ -60,4 +60,6 @@ This program defines the entry-point of a `Java class` and demonstrates how to p
 
 Instead of `classes`, I want to use `modules` in `batter`. In general, they shall have the same properties. 
 
-INFO: At this point I am not sure if there will be fully working objects in batter.
+___
+At this point I am not sure if there will be fully working objects in batter.
+___
