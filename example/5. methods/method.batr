@@ -1,7 +1,7 @@
 module Method
 
 i:square(i:number) <
-    i:result = number ** 2
+    i:result = number * number
     return result
 >
 
