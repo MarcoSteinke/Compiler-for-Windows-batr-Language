@@ -30,10 +30,24 @@ A FOR-loop is a loop which has the following:
 
 `Iterator`: A variable which will be iterated inside of the loop.
 
+`starting value`: The value at which the iterator starts.
+
 `termination condition`: A boolean expression which determines when the loop has to stop.
 
 `iteration step`: This step defines what will happen to the iterator after each iteration.
 
 Now you will find an example which shows a FOR-loop in `batter`:
 
-    for
+    for(i:i = 1, i <= 20, i++) {
+        print(i)
+    }
+
+To give a better explanation of the code, please read the following definition:
+
+`Iterator`: `i:i` An integer called i.
+
+`starting value`: `i:i = 1` The iterator i starts at 1.
+
+`termination condition`: `i <= 20` Iterate until i reaches a value greater than 20.
+
+`iteration step`: `i++` Increase i by 1 after each iteration.
