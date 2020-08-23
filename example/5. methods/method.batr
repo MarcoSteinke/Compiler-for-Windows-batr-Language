@@ -1,12 +1,12 @@
 module Method
 
-i:square(i:number) <
+i:square(i:number) {
     i:result = number * number
     return result
->
+}
 
-main <
+main {
     i:number = 4
     number = square(number)
     printf(number)
->
+}

@@ -1,8 +1,8 @@
 module Strings
 
-main <
+main {
     s:user_name = "GitHubUser"
     s:greeting = "Welcome, " + user_name
 
     print(greeting)
->
+}

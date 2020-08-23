@@ -1,6 +1,6 @@
 module Start
 
-main <
+main {
     s:text = "Hello World!"
     print(text)
->
+}
