@@ -16,4 +16,10 @@ If you want to run a piece of code for a number of parameters you could first th
         print(number+2)   
     }
 
+#### Result:
+    1
+    2
+    3
+
+
 But that is a lot of work to do and absolutely not flexible code. It is called "hard-coding".
