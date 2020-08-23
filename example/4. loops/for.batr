@@ -1,0 +1,8 @@
+module FOR
+
+main {
+
+    for(i:i = 1, i <= 20, i++) {
+        print(i)
+    }
+}

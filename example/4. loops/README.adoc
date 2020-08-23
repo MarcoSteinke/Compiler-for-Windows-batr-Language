@@ -5,8 +5,6 @@ your code do so. Therefore I will now introduce loops.
 
 To start with, in general there are two certain types of loops.
 
-## 4.1 FOR-Loops:
-
 If you want to run a piece of code for a number of parameters you could first think of something like:
 
     main {
@@ -23,3 +21,19 @@ If you want to run a piece of code for a number of parameters you could first th
 
 
 But that is a lot of work to do and absolutely not flexible code. It is called "hard-coding".
+
+To avoid something like this, we will have to use:
+
+## 4.1 FOR-Loops:
+
+A FOR-loop is a loop which has the following:
+
+`Iterator`: A variable which will be iterated inside of the loop.
+
+`termination condition`: A boolean expression which determines when the loop has to stop.
+
+`iteration step`: This step defines what will happen to the iterator after each iteration.
+
+Now you will find an example which shows a FOR-loop in `batter`:
+
+    for
