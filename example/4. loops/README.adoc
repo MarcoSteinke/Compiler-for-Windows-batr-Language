@@ -1,4 +1,19 @@
 # 4. Loops
 
 After you have learned about `data types` and `conditional programming` you will now be able to `make decisions`, or let
-your code do so. Therefore I will now introduce loops
+your code do so. Therefore I will now introduce loops.
+
+To start with, in general there are two certain types of loops.
+
+## 4.1 FOR-Loops:
+
+If you want to run a piece of code for a number of parameters you could first think of something like:
+
+    main {
+        i:number = 1
+        print(number)
+        print(number+1)
+        print(number+2)   
+    }
+
+But that is a lot of work to do and absolutely not flexible code. It is called "hard-coding".
