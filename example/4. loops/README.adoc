@@ -48,6 +48,6 @@ To give a better explanation of the code, please read the following definition:
 
 `starting value`: `i:i = 1` The iterator i starts at 1.
 
-`termination condition`: `i <= 20` Iterate until i reaches a value greater than 20.
+`termination condition`: `i <= 20` Iterate while i is smaller or equal to 20.
 
 `iteration step`: `i++` Increase i by 1 after each iteration.
