@@ -5,13 +5,13 @@ An improvement to the Windows bat scripting. Just making the things "batter"
 
     module Numbers
 
-    main <
+    main {
         i:first_number = 5
         i:second_number = 8
 
         i:result = first_number + second_number
         print(result)
-    >
+    }
 
 ## What is the purpose of this project?
 
