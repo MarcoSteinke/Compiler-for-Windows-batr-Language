@@ -2,6 +2,7 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+#include "error_checking.h"
 
 int main(int argc, char const *argv[])
 {
@@ -30,15 +31,7 @@ int main(int argc, char const *argv[])
         }
     }
 
-	/*std::ifstream source_file("hallo.batr");
-	std::ofstream compiled_file("hallo.bat");
+    int state = check_for_module(source_file_name);
 
-    std::string line;
-
-	if (source_file.is_open() )
-	{
-		while( std::getline(source_file, line) ) {
-
-        }
-	}*/
+	/**/
 } 
