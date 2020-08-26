@@ -24,17 +24,29 @@ int check_file_type(char source_file_name[])
 
     for(int i = _index; i < file_name_length; i++)
     {
-        file_type[i - _index] = source_file_name[i];
+        if(i - _index <= 4) {
+            file_type[i - _index] = source_file_name[i];
+        } else
+        {
+            return -1;
+        }
     }
 
-    if(strcmp(file_type, ".batr") == 0)
+    char* compare_string;
+    strcpy(compare_string, file_type);
+
+    printf("%s", compare_string);
+    if(strcmp(compare_string, ".batr") == 0)
     {
+        free(compare_string);
         return 0;
     } else
     {
+        free(compare_string);
         return -1;
     }
 
+    free(compare_string);
     return 0;
 }
 
