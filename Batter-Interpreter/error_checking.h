@@ -1,8 +1,10 @@
 #ifndef error_checking
 #define error_checking
 
-int check_for_module(std::string &source_file_name);
+#include <stdio.h>
 
-void print_error(std::string &error_msg);
+int check_for_module(FILE* source_file);
+
+void print_error(char* error_msg);
 
 #endif
