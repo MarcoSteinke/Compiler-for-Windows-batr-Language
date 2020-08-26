@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "error_checking.h"
+#include "error.h"
 
 int find_symbol(char* string, char symbol)
 {
@@ -31,8 +32,8 @@ char* cut_file_ending(char* file_name)
         }
     }
 
-    file_name[_index] = '\0';
     strcpy(result, file_name);
+    result[_index] = '\0';
 
     return result;
 }
@@ -49,12 +50,18 @@ int main(int argc, char const *argv[])
             // copy the source file's name from the args
             strcpy(source_file_name, argv[1]);
 
+            int res = check_file_type(source_file_name);
+            if(res == -1)
+            {
+                print_error("File is not of the type \".batr\"");
+                return 1;
+            }
+
             // remove file ending from source_file_name and store it into compiled_file_name
             strcpy(compiled_file_name, cut_file_ending(source_file_name));
 
             strcat(compiled_file_name, ".bat");
 
-            printf("%s\n", compiled_file_name);
 
         } if(argc > 2) {
 
@@ -77,8 +84,13 @@ int main(int argc, char const *argv[])
 
     if(state == -1)
     {
+        print_error("Stopped the interpretation of:");
+        printf("       %s\n", source_file_name);
+
         free(source_file);
         free(source_file_name);
         free(compiled_file_name);
+
+        return 1;
     }
 } 

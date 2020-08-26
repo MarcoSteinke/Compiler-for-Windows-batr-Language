@@ -2,12 +2,40 @@
 #include <stdlib.h>
 #include <string.h>
 #include "error_checking.h"
+#include "main.h"
+#include "error.h"
 
-void print_error(char error_msg[]) {
+int check_file_type(char source_file_name[])
+{
+    index _index = 0;
+    size_t file_name_length = strlen(source_file_name);
+    char* result = malloc(sizeof(char) * file_name_length);
 
-    const char* prefix = "BATR: ";
+    for(int i = 0; i < file_name_length; i++)
+    {
+        if(*(source_file_name + i) == '.')
+        {
+            _index = i;
+            break;
+        }
+    }
 
-    printf("%s %s \n", prefix, error_msg);
+    char file_type[5];
+
+    for(int i = _index; i < file_name_length; i++)
+    {
+        file_type[i - _index] = source_file_name[i];
+    }
+
+    if(strcmp(file_type, ".batr") == 0)
+    {
+        return 0;
+    } else
+    {
+        return -1;
+    }
+
+    return 0;
 }
 
 int check_for_module(FILE* source_file) {
@@ -32,6 +60,7 @@ int check_for_module(FILE* source_file) {
         }
 	} else 
     {
+        print_error("File not found.");
         return -1;
     }
 
