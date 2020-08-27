@@ -9,18 +9,18 @@ int check_file_type(char source_file_name[])
 {
     index _index = 0;
     size_t file_name_length = strlen(source_file_name);
-    char* result = malloc(sizeof(char) * file_name_length);
+    //char* result = malloc(sizeof(char) * file_name_length);
 
     for(int i = 0; i < file_name_length; i++)
     {
         if(*(source_file_name + i) == '.')
         {
-            _index = i;
+            _index = ++i;
             break;
         }
     }
 
-    char file_type[5];
+    char* file_type = malloc(sizeof(char) * 5);
 
     for(int i = _index; i < file_name_length; i++)
     {
@@ -32,21 +32,19 @@ int check_file_type(char source_file_name[])
         }
     }
 
-    char* compare_string;
-    strcpy(compare_string, file_type);
+    file_type[file_name_length - _index] = '\0';
 
-    printf("%s", compare_string);
-    if(strcmp(compare_string, ".batr") == 0)
+    if(strcmp(file_type, "batr") == 0)
     {
-        free(compare_string);
+        free(file_type);
         return 0;
     } else
     {
-        free(compare_string);
+        free(file_type);
         return -1;
     }
 
-    free(compare_string);
+    free(file_type);
     return 0;
 }
 
@@ -57,16 +55,15 @@ int check_for_module(FILE* source_file) {
 
 	if (source_file != NULL)
 	{
-		fscanf(source_file, "%s %s", command, parameter);
+		int scanned_values = fscanf(source_file, "%s %s", command, parameter);
 
-        if(command == NULL || parameter == NULL)
+        if(scanned_values != 2)
         {
             print_error("ERROR in line 0: There was no module defined!");
             fclose(source_file);
             return -1;
         } else 
         {
-            printf("%s %s\n", command, parameter);
             fclose(source_file);
             return 0;
         }

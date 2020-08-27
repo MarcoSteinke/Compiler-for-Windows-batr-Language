@@ -45,7 +45,8 @@ int main(int argc, char const *argv[])
 
     if(argc > 0) {
 
-        if(argc == 2) {
+        if(argc == 2) 
+        {
 
             // copy the source file's name from the args
             strcpy(source_file_name, argv[1]);
@@ -63,7 +64,8 @@ int main(int argc, char const *argv[])
             strcat(compiled_file_name, ".bat");
 
 
-        } if(argc > 2) {
+        } 
+        else if(argc > 2) {
 
             // used later for commands during compilation
             // if arg == something  
@@ -76,6 +78,7 @@ int main(int argc, char const *argv[])
             }          
         }
     }
+
 
     FILE* source_file;
     source_file = fopen(source_file_name, "r+");
