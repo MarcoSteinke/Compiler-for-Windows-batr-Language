@@ -5,6 +5,7 @@
 #include "error_checking.h"
 #include <windows.h>
 #include "file_writer.h"
+#include "string_list.h"
 #include "error.h"
 
 void free_memory(FILE* source_file, char* source_file_name, char* compiled_file_name)
