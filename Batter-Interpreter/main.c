@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "error_checking.h"
+#include <windows.h>
 #include "error.h"
 
 int find_symbol(char* string, char symbol)
@@ -74,7 +75,6 @@ int main(int argc, char const *argv[])
                 strcpy(compiled_file_name, argv[2]);
                 strcat(compiled_file_name, ".bat");
 
-                printf("%s %s\n", source_file_name, compiled_file_name);
             }          
         }
     }
