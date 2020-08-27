@@ -11,13 +11,15 @@ int main(int argc, char const *argv[])
 
     char* string1 = "module Test";
     char* string2 = "main {";
-    char* string3 = "print(\"hallo\")";
+    char* string3 = "    print(\"hello\")";
     char* string4 = "}";
 
     insert(_list, string1);
     insert(_list, string2);
     insert(_list, string3);
     insert(_list, string4);
+
+    printf("%d==4\n", _list->size);
 
     dump(_list);
 
