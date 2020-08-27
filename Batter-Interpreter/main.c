@@ -9,6 +9,7 @@
 // replication of the (String) indexOf() method from Java
 int find_symbol(char* string, char symbol)
 {
+    // iterate through the string until the symbol occurs.
     for (size_t i = 0; i < strlen(string); i++)
     {
         if(string[i] == symbol)
