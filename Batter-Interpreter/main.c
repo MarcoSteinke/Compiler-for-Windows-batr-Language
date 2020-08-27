@@ -48,9 +48,11 @@ char* cut_file_ending(char* file_name)
 
 int main(int argc, char const *argv[])
 {
+    // alloc memory for the file names
     char* source_file_name = malloc(sizeof(char) * 20);
     char* compiled_file_name = malloc(sizeof(char) * 20);
 
+    // determine which program call was used
     if(argc > 0) {
 
         if(argc == 2) 
