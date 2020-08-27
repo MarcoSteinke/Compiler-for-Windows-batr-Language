@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include "error_checking.h"
 #include <windows.h>
+#include "file_writer.h"
 #include "error.h"
 
 void free_memory(FILE* source_file, char* source_file_name, char* compiled_file_name)
@@ -118,6 +119,11 @@ int main(int argc, char const *argv[])
         return 1;
     }
 
+    // this is the point where a valid .batr with a module exists.
+
+
+
+    // close source_file and complete the algorithm.
     fclose(source_file);
     free_memory(source_file, source_file_name, compiled_file_name);
 
