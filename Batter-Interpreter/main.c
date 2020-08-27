@@ -88,12 +88,14 @@ int main(int argc, char const *argv[])
         }
     }
 
-
+    // setup the source_file
     FILE* source_file;
     source_file = fopen(source_file_name, "r+");
 
+    // check if a module was defined in the source_file
     int state = check_for_module(source_file);
 
+    // if there was no module, throw an error
     if(state == -1)
     {
         print_error("Stopped the interpretation of:");
