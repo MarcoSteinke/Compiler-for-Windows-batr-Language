@@ -17,6 +17,11 @@ void set_color_green()
     SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN);
 }
 
+void set_color_red()
+{
+    SetConsoleTextAttribute(hConsole, FOREGROUND_RED);
+}
+
 void restore_color()
 {
     SetConsoleTextAttribute(hConsole, saved_attributes);
@@ -36,6 +41,9 @@ void print_error(char error_msg[])
     // change terminal color to blue
     set_color_blue();
     printf("%s ", prefix);
+
+    set_color_red();
+    printf("[!] ");
 
     // restore terminal color
     restore_color();
