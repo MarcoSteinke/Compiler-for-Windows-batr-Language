@@ -12,6 +12,7 @@ int find_symbol(char* string, char symbol)
     // iterate through the string until the symbol occurs.
     for (size_t i = 0; i < strlen(string); i++)
     {
+        // if symbol is found, return its index
         if(string[i] == symbol)
         {
             return i;
