@@ -31,13 +31,10 @@ image::https://raw.githubusercontent.com/MarcoSteinke/Windows-batr-Language/mast
 
 ## Current progress:
 
-[*] using C instead of C++
-
-[*] checking for file exceptions
-
-[*] detect if a file is of the type .batr
-
-[*] colorized terminal output
+* [*] using C instead of C++
+* [*] checking for file exceptions
+* [*] detect if a file is of the type .batr
+* [*] colorized terminal output
 
 ## Documentation
 
