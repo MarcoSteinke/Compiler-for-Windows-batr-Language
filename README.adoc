@@ -5,7 +5,7 @@ image::https://github.com/maste150hhu/Windows-batter-Language/blob/master/files/
 The truly object-oriented scripting language. Write `Windows Batch Scripts` using objects
 and real data types.
 
-image::https://github.com/MarcoSteinke/Windows-batr-Language/blob/master/files/oop.png?raw=true[width=50%]
+image::https://github.com/MarcoSteinke/Windows-batr-Language/blob/master/files/oop.png?raw=true[width=50%, scalewidth=17cm]
 
 An improvement to the Windows bat scripting. Just making the things "batter"
 
