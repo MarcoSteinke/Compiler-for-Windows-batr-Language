@@ -12,6 +12,8 @@ struct string_list {
 
 typedef struct string_list string_list;
 
+void dump(string_list* string_list);
+
 string_list* create();
 
 void insert(string_list* string_list, char* string);

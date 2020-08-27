@@ -1,7 +1,7 @@
+#include "string_list.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "string_list.h"
 
 string_list* create()
 {
@@ -19,5 +19,14 @@ void insert(string_list* string_list, char* string)
     {
         string_list = realloc(string_list, sizeof(char) * string_list->MAX_STRING_LENGTH * (string_list->size + 1) );
         strcpy(*(string_list->elements + string_list->size++), string);
+        printf("--> %s\n", string_list->elements[string_list->size]);
+    }
+}
+
+void dump(string_list* string_list)
+{
+    for(int i = 0; i < string_list->size; i++)
+    {
+        printf("%s\n", string_list->elements[i]);
     }
 }
