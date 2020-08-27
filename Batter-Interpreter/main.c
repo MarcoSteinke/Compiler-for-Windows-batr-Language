@@ -6,6 +6,7 @@
 #include <windows.h>
 #include "error.h"
 
+// replication of the (String) indexOf() method from Java
 int find_symbol(char* string, char symbol)
 {
     for (size_t i = 0; i < strlen(string); i++)
@@ -24,6 +25,7 @@ char* cut_file_ending(char* file_name)
     size_t file_name_length = strlen(file_name);
     char* result = malloc(sizeof(char) * file_name_length);
 
+    // iterate through the filename until a . appears
     for(int i = 0; i < file_name_length; i++)
     {
         if(*(file_name + i) == '.')
@@ -33,7 +35,10 @@ char* cut_file_ending(char* file_name)
         }
     }
 
+    // copy the filename to a new variable
     strcpy(result, file_name);
+
+    // cut the file ending starting at _index
     result[_index] = '\0';
 
     return result;
