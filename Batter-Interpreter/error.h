@@ -10,6 +10,8 @@ void save_standard();
 
 void set_color_blue();
 
+void set_color_green();
+
 void restore_color();
 
 void print_error(char error_msg[]);

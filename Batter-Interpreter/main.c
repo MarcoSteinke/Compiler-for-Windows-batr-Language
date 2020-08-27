@@ -107,7 +107,9 @@ int main(int argc, char const *argv[])
     if(state == -1)
     {
         print_error("Stopped the interpretation of:");
+        set_color_green();
         printf("       %s\n", source_file_name);
+        restore_color();
 
         free_memory(source_file, source_file_name, compiled_file_name);
 

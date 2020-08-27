@@ -12,6 +12,11 @@ void set_color_blue()
     SetConsoleTextAttribute(hConsole, FOREGROUND_BLUE);
 }
 
+void set_color_green()
+{
+    SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN);
+}
+
 void restore_color()
 {
     SetConsoleTextAttribute(hConsole, saved_attributes);
