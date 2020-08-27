@@ -6,6 +6,13 @@
 #include <windows.h>
 #include "error.h"
 
+void free_memory(FILE* source_file, char* source_file_name, char* compiled_file_name)
+{
+    free(source_file);
+    free(source_file_name);
+    free(compiled_file_name);
+}
+
 // replication of the (String) indexOf() method from Java
 int find_symbol(char* string, char symbol)
 {
@@ -101,9 +108,7 @@ int main(int argc, char const *argv[])
         print_error("Stopped the interpretation of:");
         printf("       %s\n", source_file_name);
 
-        free(source_file);
-        free(source_file_name);
-        free(compiled_file_name);
+        
 
         return 1;
     }
