@@ -28,13 +28,13 @@ Now you will learn how to write your first program.
 
     module Start
      
-    main <
+    main {
         s:text = "Hello World!"
         print(text)
-    >
+    }
 
 As you can see, to define the `main method` you will only have to write `main`, but additionally you will have
-to give your main method a scope. This scope will be defined by `< >`. Those symbols will also be used for all
+to give your main method a scope. This scope will be defined by `{ }`. Those symbols will also be used for all
 `other scopes` in this language.
 
 The next thing you can see inside is the implementation of a `simple Hello-World-program`. If you know this, you can now
@@ -68,9 +68,9 @@ In addition to the previous example of HelloWorld in batter, you could also do t
 
     module Start
      
-    main <
+    main {
         print("Hello World!")
-    >
+    }
 
 As you can see, you can also directly call `print` with a string inside, you do not have to set a variable before.
 
