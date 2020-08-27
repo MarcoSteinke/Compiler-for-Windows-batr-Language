@@ -113,6 +113,13 @@ int main(int argc, char const *argv[])
 
         free_memory(source_file, source_file_name, compiled_file_name);
 
+        fclose(source_file);
+
         return 1;
     }
+
+    fclose(source_file);
+    free_memory(source_file, source_file_name, compiled_file_name);
+
+    return 0;
 } 
