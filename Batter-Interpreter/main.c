@@ -8,9 +8,9 @@
 
 void free_memory(FILE* source_file, char* source_file_name, char* compiled_file_name)
 {
-    free(source_file);
-    free(source_file_name);
-    free(compiled_file_name);
+    if(source_file != NULL)        free(source_file);
+    if(source_file_name != NULL)   free(source_file_name);
+    if(compiled_file_name != NULL) free(compiled_file_name);
 }
 
 // replication of the (String) indexOf() method from Java
@@ -72,6 +72,7 @@ int main(int argc, char const *argv[])
             if(res == -1)
             {
                 print_error("File is not of the type \".batr\"");
+                free_memory(NULL, source_file_name, compiled_file_name);
                 return 1;
             }
 
@@ -108,7 +109,7 @@ int main(int argc, char const *argv[])
         print_error("Stopped the interpretation of:");
         printf("       %s\n", source_file_name);
 
-        
+        free_memory(source_file, source_file_name, compiled_file_name);
 
         return 1;
     }
