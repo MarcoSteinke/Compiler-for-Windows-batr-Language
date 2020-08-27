@@ -38,3 +38,7 @@ image::https://raw.githubusercontent.com/MarcoSteinke/Windows-batr-Language/mast
 [x] detect if a file is of the type .batr
 
 [x] colorized terminal output
+
+## Documentation
+
+There is an explanation / documentation available. You can click https://github.com/MarcoSteinke/Windows-batr-Language/tree/master/example/1.%20modules[ℹ️ here] to visit it.
