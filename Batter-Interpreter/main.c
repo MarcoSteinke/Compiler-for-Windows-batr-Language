@@ -122,6 +122,11 @@ int main(int argc, char const *argv[])
 
     // this is the point where a valid .batr with a module exists.
 
+    // initialize lists for the resulting bat code and collect error messages.
+    string_list* interpreted_bat_code = create();
+    string_list* error_list = create();
+
+    index line_counter = 1;
 
 
     // close source_file and complete the algorithm.
