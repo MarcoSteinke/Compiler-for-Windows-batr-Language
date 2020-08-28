@@ -1,2 +1,2 @@
 compile: main.c main.h
-	gcc -g -Wall *.c -o batter
+	gcc -g -Wall -Wno-unused *.c -o batter
