@@ -7,6 +7,7 @@
 #include "file_writer.h"
 #include "string_list.h"
 #include "error.h"
+#include "printer.h"
 
 void free_memory(FILE* source_file, char* source_file_name, char* compiled_file_name)
 {
@@ -61,15 +62,23 @@ int main(int argc, char const *argv[])
     char* source_file_name = malloc(sizeof(char) * 20);
     char* compiled_file_name = malloc(sizeof(char) * 20);
 
+    char* compared_version = "-v";
+
     // determine which program call was used
     if(argc > 0) {
 
+        // copy the source file's name from the args
+        strcpy(source_file_name, argv[1]);
+
         // if first parameter was -v
-        if(argc == 2 && strcmp(source_file_name, "-v" == 0))
+        if(argc == 2 && strcmp(source_file_name, compared_version) == 0)
         {
-            // require printer
+            print_to_console("Version: 0.1");
+            printf("This version of batter is the first working build. It is only able to\nreceive arguments, but not to interpret anything yet.");
+
+            return 0;
         } 
-        else if(argc == 2 && strcmp(source_file_name, "-v" != 0)) 
+        else if(argc == 2 && strcmp(source_file_name, "-v") != 0) 
         {
 
             // copy the source file's name from the args
