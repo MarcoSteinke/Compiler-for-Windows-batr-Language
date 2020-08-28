@@ -64,7 +64,12 @@ int main(int argc, char const *argv[])
     // determine which program call was used
     if(argc > 0) {
 
-        if(argc == 2) 
+        // if first parameter was -v
+        if(argc == 2 && strcmp(source_file_name, "-v" == 0))
+        {
+            // require printer
+        } 
+        else if(argc == 2 && strcmp(source_file_name, "-v" != 0)) 
         {
 
             // copy the source file's name from the args
@@ -84,7 +89,7 @@ int main(int argc, char const *argv[])
             strcat(compiled_file_name, ".bat");
 
 
-        } 
+        }
         else if(argc > 2) {
 
             // used later for commands during compilation
