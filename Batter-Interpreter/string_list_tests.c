@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main(int argc, char const *argv[])
+/*int main(int argc, char const *argv[])
 {
     string_list* _list = create();
 
@@ -24,4 +24,4 @@ int main(int argc, char const *argv[])
     dump(_list);
 
     return 0;
-}
+}*/
