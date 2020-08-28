@@ -2,6 +2,8 @@ image::https://github.com/maste150hhu/Windows-batter-Language/blob/master/files/
 
 # Windows-batter-Language
 
+![C/C++ CI](https://github.com/MarcoSteinke/Windows-batr-Language/workflows/C/C++%20CI/badge.svg?branch=master)
+
 The truly object-oriented scripting language. Write `Windows Batch Scripts` using objects
 and real data types.
 
