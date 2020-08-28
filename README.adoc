@@ -7,8 +7,6 @@ image::https://github.com/MarcoSteinke/Windows-batr-Language/workflows/C/C++%20C
 The truly object-oriented scripting language. Write `Windows Batch Scripts` using objects
 and real data types.
 
-image::https://github.com/MarcoSteinke/Windows-batr-Language/blob/master/files/oop.png?raw=true[width=20%]
-
 An improvement to the Windows bat scripting. Just making the things "batter"
 
     module Numbers
@@ -20,6 +18,8 @@ An improvement to the Windows bat scripting. Just making the things "batter"
     }
 
 ## What is the purpose of this project?
+
+image::https://github.com/MarcoSteinke/Windows-batr-Language/blob/master/files/oop.png?raw=true[width=20%]
 
 I want batr to be a better version of the windows batch scripting. I have written a lot
 of automizations and small programs for 8 years now. Windows batch scripting brought me into programming and always followed me.
