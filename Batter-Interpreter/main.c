@@ -142,12 +142,15 @@ int main(int argc, char const *argv[])
 
     if(main_exists != 0)
     {
-        print_error("There was no main defined");
-        print_error("Stopped the interpretation of:");
-        set_color_green();
-        printf("           %s\n", source_file_name);
-        restore_color();
-        printf("       %s\n", argv[1]);
+
+        if(main_exists == 1)
+        {
+            print_error("There was no main defined");
+        }
+        else if(main_exists == 2)
+        {
+            print_error("There was a problem with the scopes.");
+        }
 
         fclose(source_file);
         free_memory(source_file, source_file_name, compiled_file_name);
