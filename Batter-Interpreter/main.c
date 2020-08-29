@@ -133,8 +133,25 @@ int main(int argc, char const *argv[])
 
         return 1;
     }
-
     // this is the point where a valid .batr with a module exists.
+    fclose(source_file);
+    source_file = fopen(source_file_name, "r+");
+
+    // now it is required to find the main method.
+    int main_exists = find_method("main", source_file);
+
+    if(main_exists != 0)
+    {
+        print_error("There was no main defined");
+        print_error("Stopped the interpretation of:");
+        set_color_green();
+        printf("           %s\n", source_file_name);
+        restore_color();
+        printf("       %s\n", argv[1]);
+
+        fclose(source_file);
+        free_memory(source_file, source_file_name, compiled_file_name);
+    }
 
     // initialize lists for the resulting bat code and collect error messages.
     string_list* interpreted_bat_code = create();
