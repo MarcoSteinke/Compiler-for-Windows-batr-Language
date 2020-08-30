@@ -1,5 +1,7 @@
 #include "parser.h"
 #include "syntax.h"
+#include "main.h"
+#include "string_list.h"
 
 unsigned short find_method(char* method_name, FILE* source_file)
 {
@@ -88,4 +90,18 @@ unsigned short find_method(char* method_name, FILE* source_file)
     }
 
     return 1;
+}
+
+unsigned short interpret(FILE* source_file, index* _index, string_list* interpreted_bat_code, string_list* error_list)
+{
+    char* line = malloc(sizeof(char) * MAX_LINE_LENGTH);
+
+    // check for null pointer
+    if(!source_file)
+    {
+        free(line);
+        return -1;
+    }
+
+    return 0;
 }
