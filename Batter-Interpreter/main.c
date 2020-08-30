@@ -8,6 +8,7 @@
 #include "string_list.h"
 #include "error.h"
 #include "printer.h"
+#include "parser.h"
 
 void free_memory(FILE* source_file, char* source_file_name, char* compiled_file_name)
 {
