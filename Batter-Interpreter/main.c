@@ -160,6 +160,10 @@ int main(int argc, char const *argv[])
     string_list* interpreted_bat_code = create();
     string_list* error_list = create();
 
+    // reset source_file pointer
+    fclose(source_file);
+    source_file = fopen(source_file_name, "r+");
+
     index line_counter = 1;
 
 
