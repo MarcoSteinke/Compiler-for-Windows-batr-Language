@@ -165,7 +165,15 @@ int main(int argc, char const *argv[])
     fclose(source_file);
     source_file = fopen(source_file_name, "r+");
 
-    index line_counter = 1;
+    index* line_counter = malloc(sizeof(int));
+    *line_counter = 1;
+
+    unsigned short interpretation_state = interpret(
+        source_file, 
+        line_counter, 
+        interpreted_bat_code, 
+        error_list
+    );
 
 
     // close source_file and complete the algorithm.
