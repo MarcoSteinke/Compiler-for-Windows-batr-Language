@@ -92,15 +92,31 @@ unsigned short find_method(char* method_name, FILE* source_file)
     return 1;
 }
 
-unsigned short interpret(FILE* source_file, index* _index, string_list* interpreted_bat_code, string_list* error_list)
+unsigned short interpret(FILE* source_file, index* line_counter, string_list* interpreted_bat_code, string_list* error_list)
 {
     char* line = malloc(sizeof(char) * MAX_LINE_LENGTH);
+
+    size_t line_length = 0;
 
     // check for null pointer
     if(!source_file)
     {
         free(line);
         return -1;
+    }
+
+    // iterate through the source_file as long as there are new lines.
+    while(fscanf(source_file, "%[^\n]s", line) > 0)
+    {
+        // iterate through the current line.
+        for(index _index = 0; _index < ( line_length = strlen(line) ); _index++)
+        {
+            
+        }
+
+
+        // increment the line_counter.
+        line_counter++;
     }
 
     return 0;
