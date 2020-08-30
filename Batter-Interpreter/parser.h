@@ -18,6 +18,4 @@ unsigned short interpret(
     string_list* error_list
 );
 
-const unsigned short MAX_LINE_LENGTH = 120;
-
 #endif

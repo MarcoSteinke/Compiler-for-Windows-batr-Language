@@ -3,6 +3,8 @@
 #include "main.h"
 #include "string_list.h"
 
+const unsigned short MAX_LINE_LENGTH = 120;
+
 unsigned short find_method(char* method_name, FILE* source_file)
 {
     // setup some variables for iteration throug the source_file
