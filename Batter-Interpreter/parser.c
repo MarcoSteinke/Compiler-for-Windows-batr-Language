@@ -1,5 +1,5 @@
 #include "parser.h"
-#include "syntax.h"4
+#include "syntax.h"
 
 unsigned short find_method(char* method_name, FILE* source_file)
 {
