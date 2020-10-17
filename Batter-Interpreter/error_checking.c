@@ -7,11 +7,11 @@
 
 int check_file_type(char source_file_name[])
 {
-    index _index = 0;
+    unsigned int _index = 0;
     size_t file_name_length = strlen(source_file_name);
 
     // iterate through the given filename and find the file type
-    for(int i = 0; i < file_name_length; i++)
+    for(int i = file_name_length-1; i >= 0; i--)
     {
 
         if(*(source_file_name + i) == '.')
@@ -69,33 +69,21 @@ int check_for_module(FILE* source_file) {
     char command[20];
     char parameter[60];
 
-	if (source_file != NULL)
-	{
+	if (source_file != NULL) {
 
 		int scanned_values = fscanf(source_file, "%s %s", command, parameter);
 
-        if(scanned_values != 2)
-        {
+        if(scanned_values != 2) {
 
             print_error("ERROR in line 0: There was no module defined!");
             fclose(source_file);
-            return -1;
-
-        } else 
-        {
-
-            fclose(source_file);
-            return 0;
-
+            exit(1);
         }
-	} else 
-    {
+	} else {
 
         print_error("File not found.");
-        return -1;
-
+        exit(1);
     }
 
-    fclose(source_file);
     return 0;
 }

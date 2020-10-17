@@ -8,7 +8,7 @@ string_list* create()
     string_list* result = malloc(sizeof(string_list));
     result->size = 0;
     result->MAX_STRING_LENGTH = 20;
-    result->elements = malloc(sizeof(char) * result->MAX_STRING_LENGTH * (result->size + 1));
+    result->elements = malloc(sizeof(char*) * result->MAX_STRING_LENGTH * (result->size + 1));
 
     return result;
 }
@@ -29,4 +29,9 @@ void dump(string_list* string_list)
     {
         printf("%s\n", string_list->elements[i]);
     }
+}
+
+void delete(string_list* this){
+    free(this->elements);
+    free(this);
 }
