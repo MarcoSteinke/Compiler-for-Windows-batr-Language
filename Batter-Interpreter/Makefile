@@ -6,3 +6,4 @@ windows: $(DEPS)
 
 linux: $(DEPS)
 	gcc $(CFLAGS) *.c -o batter
+	valgrind --leak-check=full ./batter demo.batr 
