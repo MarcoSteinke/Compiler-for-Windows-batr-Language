@@ -1,21 +1,16 @@
 #include "main.h"
+
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+
 #include "error_checking.h"
-#include <windows.h>
+#include "win.h"
 #include "file_writer.h"
 #include "string_list.h"
 #include "error.h"
 #include "printer.h"
 #include "parser.h"
-
-void free_memory(FILE* source_file, char* source_file_name, char* compiled_file_name)
-{
-    if(source_file != NULL)        free(source_file);
-    if(source_file_name != NULL)   free(source_file_name);
-    if(compiled_file_name != NULL) free(compiled_file_name);
-}
 
 // replication of the (String) indexOf() method from Java
 int find_symbol(char* string, char symbol)
@@ -34,9 +29,9 @@ int find_symbol(char* string, char symbol)
 
 char* cut_file_ending(char* file_name)
 {
-    index _index = 0;
+    unsigned int _index = 0;
     size_t file_name_length = strlen(file_name);
-    char* result = malloc(sizeof(char) * file_name_length);
+    char* result = malloc(sizeof(char) * (file_name_length+1));
 
     // iterate through the filename until a . appears
     for(int i = 0; i < file_name_length; i++)
@@ -60,8 +55,8 @@ char* cut_file_ending(char* file_name)
 int main(int argc, char const *argv[])
 {
     // alloc memory for the file names
-    char* source_file_name = malloc(sizeof(char) * 20);
-    char* compiled_file_name = malloc(sizeof(char) * 20);
+    char source_file_name[20];
+    char compiled_file_name[20];
 
     char* compared_version = "-v";
 
@@ -89,16 +84,15 @@ int main(int argc, char const *argv[])
             if(res == -1)
             {
                 print_error("File is not of the type \".batr\"");
-                free_memory(NULL, source_file_name, compiled_file_name);
                 return 1;
             }
 
             // remove file ending from source_file_name and store it into compiled_file_name
-            strcpy(compiled_file_name, cut_file_ending(source_file_name));
+            char* cut = cut_file_ending(source_file_name);
+            strcpy(compiled_file_name, cut);
+            free(cut);
 
             strcat(compiled_file_name, ".bat");
-
-
         }
         else if(argc > 2) {
 
@@ -116,6 +110,7 @@ int main(int argc, char const *argv[])
     // setup the source_file
     FILE* source_file;
     source_file = fopen(source_file_name, "r+");
+    if(source_file == NULL) exit(-1);
 
     // check if a module was defined in the source_file
     int state = check_for_module(source_file);
@@ -128,10 +123,7 @@ int main(int argc, char const *argv[])
         printf("           %s\n", source_file_name);
         restore_color();
 
-        free_memory(source_file, source_file_name, compiled_file_name);
-
         fclose(source_file);
-
         return 1;
     }
     // this is the point where a valid .batr with a module exists.
@@ -154,7 +146,6 @@ int main(int argc, char const *argv[])
         }
 
         fclose(source_file);
-        free_memory(source_file, source_file_name, compiled_file_name);
     }
 
     // initialize lists for the resulting bat code and collect error messages.
@@ -165,20 +156,20 @@ int main(int argc, char const *argv[])
     fclose(source_file);
     source_file = fopen(source_file_name, "r+");
 
-    index* line_counter = malloc(sizeof(int));
-    *line_counter = 1;
+    unsigned int line_counter = 1;
 
     unsigned short interpretation_state = interpret(
         source_file, 
-        line_counter, 
+        &line_counter, 
         interpreted_bat_code, 
         error_list
     );
 
-
     // close source_file and complete the algorithm.
     fclose(source_file);
-    free_memory(source_file, source_file_name, compiled_file_name);
+
+    delete(interpreted_bat_code);
+    delete(error_list);
 
     return 0;
 } 
